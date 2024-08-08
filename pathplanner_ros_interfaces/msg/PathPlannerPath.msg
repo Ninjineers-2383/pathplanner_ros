@@ -1,0 +1,9 @@
+geometry_msgs/Point bezier_points
+    rotationTargets: List[RotationTarget]
+    constraintZones: List[ConstraintsZone]
+    eventMarkers: List[EventMarker]
+    globalConstraints: PathConstraints
+    goalEndState: GoalEndState
+    allPoints: List[PathPoint]
+    reversed: bool
+    previewStartingRotation: Rotation2d
