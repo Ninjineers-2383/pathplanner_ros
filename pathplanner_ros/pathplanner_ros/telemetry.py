@@ -31,8 +31,12 @@ class PPLibTelemetry:
 
     @staticmethod
     def setPathInaccuracy(inaccuracy: float) -> None:
-        pass
+        PPLibTelemetry._innacuracy = inaccuracy
         #PPLibTelemetry._inaccuracyPub.set(inaccuracy)
+
+    @staticmethod
+    def setCurrentTime(current_time: float) -> None:
+        PPLibTelemetry._current_time = current_time
 
     @staticmethod
     def setCurrentPose(pose: Pose2d) -> None:

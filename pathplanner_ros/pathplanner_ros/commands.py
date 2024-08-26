@@ -103,6 +103,8 @@ class FollowPathCommand:
         if not self._controller.isHolonomic() and self._path.isReversed():
             targetState = targetState.reverse()
 
+        PPLibTelemetry.setCurrentTime(currentTime)
+
         currentPose = self._poseSupplier()
         currentSpeeds = self._speedsSupplier()
 

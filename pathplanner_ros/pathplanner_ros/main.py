@@ -60,6 +60,13 @@ class PathFollowedAction:
 
         while rclpy.ok() and goal_handle.is_active and not self.command.isFinished():
             self.command.execute()
+
+            feedback = FollowPath.Feedback()
+            feedback.path_seconds = PPLibTelemetry._current_time
+            feedback.error_distance = PPLibTelemetry._innacuracy
+
+            goal_handle.publish_feedback(feedback)
+
             rate.sleep()
 
         self.command.end(not goal_handle.is_active)

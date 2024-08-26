@@ -1,3 +1,4 @@
 ---
 ---
-geometry_msgs/TwistStamped error_distance
+float64 path_seconds
+float64 error_distance
